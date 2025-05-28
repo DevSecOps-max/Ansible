@@ -6,7 +6,6 @@
     DURATION: 10 hrs
     TRAINER: Kohli
   tasks:
-  - name: print course information
-    ansible.builtin.debug:
-    msg: "hello {{ COURSE }}, Course Duration is: {{ DURATION }}, from the trainer {{ TRAINER }}"
-    
+    - name: print course information
+      ansible.builtin.debug:
+        msg: "hello {{ COURSE }}, Course Duration is: {{ DURATION }}, from the trainer {{ TRAINER }}"
