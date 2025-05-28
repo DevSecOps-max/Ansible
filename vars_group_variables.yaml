@@ -1,5 +1,5 @@
 - name: Variables from Inventory
-  hosts: Frontend
+  hosts: frontend
   tasks:
   - name: print Course information
     ansible.builtin.debug:
