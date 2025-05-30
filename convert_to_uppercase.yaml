@@ -1,0 +1,10 @@
+- name: convert to uppercase
+  hosts: local
+  connection: local
+  tasks:
+    - name: convert into uppercase
+      vars:
+        name: Siva Kumar reddy
+      ansible.builtin.debug:
+        msg: "Hello {{ name | upper }}"
+ 
