@@ -3,12 +3,11 @@
   connection: local
   tasks:
   - name: convert map to list
-  vars:
-    course:
-      name: ansible
-      duration: 5 hrs
-      trainer: kumar
-  ansible.builtin.debug:
-    msg: "Course information: {{ course | dict2items }}"
+    vars:
+      course:
+        name: ansible
+        duration: 5 hrs
+        trainer: kumar
+    ansible.builtin.debug:
+      msg: "Course information: {{ course | dict2items }}"
 
-    
