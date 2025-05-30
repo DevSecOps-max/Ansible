@@ -1,0 +1,16 @@
+- name: playbook control using gathering facts
+  hosts: frontend
+  become: true
+  tasks:
+  - name: install nginx if it is a redhat DS
+    ansible.builtin.dnf:
+      name: nginx
+      state: present
+    when: ansible_os_family == "redhat"
+    
+  - name: install nginx if it is a Debian/ubuntu DS
+    ansible.builtin.apt:
+      name: nginx
+      state: present
+    when: ansible_os_family == "Debian"
+  
