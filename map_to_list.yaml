@@ -1,0 +1,10 @@
+- name: map to list transformation:
+  hosts: local
+  connection: local
+  vars:
+    course:
+      name: ansible
+      duration: 5 hrs
+      trainer: kumar
+  ansible.builtin.debug:
+    msg: "Course information: {{ course | dict2items }}"
