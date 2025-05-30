@@ -1,4 +1,4 @@
-- name: map to list transformation  
+- name: map_list  
   hosts: local
   connection: local
   vars:
