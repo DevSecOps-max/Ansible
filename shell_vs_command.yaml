@@ -1,6 +1,12 @@
+# - name: shell vs command
+#   hosts: webapp
+#   tasks:
+#   - name: redirect ls command out to a file
+#     ansible.builtin.command: "ls -l > /tmp/output.txt"
+
 - name: shell vs command
   hosts: webapp
   tasks:
   - name: redirect ls command out to a file
-    ansible.builtin.command: "ls -l > /tmp/output.txt"
+    ansible.builtin.shell: "ls -l > /tmp/output.txt"
     
