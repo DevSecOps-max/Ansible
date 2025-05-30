@@ -1,0 +1,9 @@
+- name: check if the IP address is valid or not
+  hosts: local
+  connection: local
+  tasks:
+  - name: Check if the provided IP address is valid or not
+    vars:
+      IP: 400.200.100.10
+    ansible.builtin.debug:
+      msg: "{{ IP |  ansible.utils.ipaddr }}"
